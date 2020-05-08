@@ -9,7 +9,6 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
             cartItem.id === cartItemToAdd.id
             ? {...cartItem, quantity: cartItem.quantity + 1}
             : cartItem
-            
         )
     }
 

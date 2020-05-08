@@ -25,6 +25,17 @@ const cartReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 items : state.items.filter(cartItem => cartItem.id !== action.payload.id)
             };
+
+        case CartActionTypes.REMOVE_SINGLE_ITEM:
+            return {
+                ...state,
+                items : (state.items.map(cartItem =>
+                    cartItem.id === action.payload.id
+                    ? {...cartItem, quantity: cartItem.quantity - 1}
+                    : cartItem
+                )).filter(cartItem => cartItem.quantity >= 1)
+            }
+
         default:
             return state;
     }

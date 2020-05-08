@@ -13,11 +13,10 @@ const CheckoutItem = ({item, removeItem, removeSingleItem, addItem}) => {
         <span className='name'>{name}</span>
         <span className='quantity'>
             <div className='arrow'
-                onClick={() => removeSingleItem(item)}>&#10134;</div>
+                onClick={() => removeSingleItem(item)}><span role="img" aria-label="Remove one item">&#10134;</span></div>
             <span className='value'>{quantity}</span>    
             <div className='arrow'
-            onClick={() => addItem(item)}>&#10133;
-            </div>
+            onClick={() => addItem(item)}><span role="img" aria-label="Remove one item">&#10133;</span></div>
         </span>
         <span className='price'>{price}</span>
         <span className='remove-button' onClick={() => removeItem(item)}>&#10005;</span>

@@ -9,7 +9,7 @@ const onToken = token => {
 
 const StripeCheckoutButton = ({price}) => {
     const priceForStripe = price * 100;
-    const publishableKey = '';
+    const publishableKey = 'pk_test_u147F819AgY9Ij0SWBQSACdh00gNMz6FDQ';
 
     return (
         <StripeCheckout
